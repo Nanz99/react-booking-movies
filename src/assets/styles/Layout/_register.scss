@@ -1,0 +1,119 @@
+.register{
+   position: relative;
+   background-color: $color-white-0;
+   .register__content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 5px auto;
+      max-width: 1200px;
+      z-index: 19;
+      ul{
+         li{
+            display: inline;
+            margin: 0 30px 0 0;
+            a{
+               display: inline-flex;
+               align-items: center;
+               span{
+                  font-size: 16px;
+                  text-transform: uppercase;
+                  padding-left: 7px;color: $color-pink-1;
+               }
+            }
+         }
+      }
+      a.hotline{
+         display: flex;
+         align-items: center;
+        
+         images{
+            width: 20%;
+            display: block;
+         }
+         span{
+            padding-left: 8px;
+            font-size: 22px;
+            font-weight: 700;
+            color: $color-orrange-0;
+         }
+      }
+   }
+}
+
+
+
+@include reponsive('large'){
+   .register{
+      .register__content{
+         justify-content: center;
+         ul{
+            li{
+               margin: 0 25px 0 0;
+               a{
+                  span{
+                     font-size: 14px;
+                  }
+               }
+            }
+         }
+         a.hotline{
+           span{
+              font-size: 25px;
+           }
+         }
+      }
+   }
+}
+@include reponsive('medium'){
+   .register{
+      .register__content{
+         justify-content: center;
+         ul{
+            li{
+               margin: 0;
+               a{
+                  images{
+                     width: 20%;
+                     display: block;
+                  }
+                  span{
+                     font-size: 12px;
+                  }
+               }
+            }
+         }
+         a.hotline{
+            span{
+               font-size: 18px;;
+            }
+         }
+      }
+   }
+}
+@include reponsive('small'){
+   .register{
+      .register__content{
+         display: inline-block;
+         text-align: center;
+         width: 100%;
+         ul{
+            li{
+               margin: 0;
+               a{
+                  images{
+                     width: 20%;
+                     display: block;
+                  }
+               }
+            }
+         }
+         a.hotline{
+            display: inline-flex;
+            justify-content: center;
+         }
+      }
+   }
+}
+
